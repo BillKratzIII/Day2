@@ -25,6 +25,9 @@ public class Day2Assignment {
 		System.out.println("Rolling Dice...You got a: " + rollDice());
 		System.out.println("The statement- I can buy lunch is " + canIBuyLunch(4.50,4.50));
 		System.out.println(compareFavorites("blue"));
+		int num1 = 10; int num2 = 5;
+		System.out.println(num1 + " divisible by " + num2 + " is " + isDivisible(num1,num2));
+		greeting("Erin");
 	}
 
 	// Adventurer Mode
@@ -142,6 +145,19 @@ public class Day2Assignment {
 		}
 	}
 	
+	//method 9
+	public static boolean isDivisible(int num1, int num2){
+		if(num1%num2 == 0){
+			return true;
+		}else{
+			return false;
+		}	
+	}
+	
+	//method 10
+	public static void greeting(String name){
+		System.out.println("Greetings " + name + "!");
+	}
 	
 }
 	
