@@ -17,16 +17,18 @@ public class Day2Assignment {
 		System.out.println("I spend " + cash + " on a cheeseburger.");
 		System.out.println(c + " marks the spot.");
 
+		// Call 10 methods
 		printArray();
 		System.out.println(ownDog(true));
-		System.out.println(battingAverage(68,120));
+		System.out.println(battingAverage(68, 120));
 		System.out.println(higherNum(4, 127));
 		System.out.println(randomNumber());
 		System.out.println("Rolling Dice...You got a: " + rollDice());
-		System.out.println("The statement- I can buy lunch is " + canIBuyLunch(4.50,4.50));
-		System.out.println(compareFavorites("blue"));
-		int num1 = 10; int num2 = 5;
-		System.out.println(num1 + " divisible by " + num2 + " is " + isDivisible(num1,num2));
+		System.out.println("The statement- I can buy lunch is " + canIBuyLunch(4.50, 4.50));
+		System.out.println(compareFavorites("Blue"));
+		int num1 = 10;
+		int num2 = 5;
+		System.out.println(num1 + " divisible by " + num2 + " is " + isDivisible(num1, num2));
 		greeting("Erin");
 	}
 
@@ -38,7 +40,7 @@ public class Day2Assignment {
 		String[] favoriteBands = { "Blink 182", "New Found Glory", "Starting Line", "Florida Georgia Line",
 				"Red Hot Chilli Peppers", "AC/DC", "AeroSmith", "The All American Rejects", "All Time Low",
 				"American Authors" };
-		
+
 		// Epic Mode
 		String[][] multiDimen = new String[4][10];
 		multiDimen[0][0] = "Favorite Foods:";
@@ -72,93 +74,90 @@ public class Day2Assignment {
 			System.out.println();
 		}
 	}
-	
-	//method 2
-	private static String ownDog(boolean haveDog){
+
+	// method 2
+	private static String ownDog(boolean haveDog) {
 		String message = null;
-		if(haveDog){
+		if (haveDog) {
 			message = "I do own a dog.";
-		}else{
+		} else {
 			message = "I do not own a dog.";
 		}
 		return message;
 	}
-	
-	//method 3
-	protected static float battingAverage(float numHits, float numAtBats){
-		return (numHits/numAtBats);
+
+	// method 3
+	protected static float battingAverage(float numHits, float numAtBats) {
+		return (numHits / numAtBats);
 	}
-	
-	//method 4
-	public static int higherNum(int num1, int num2){
-		if(num1>num2){
+
+	// method 4
+	public static int higherNum(int num1, int num2) {
+		if (num1 > num2) {
 			return num1;
-		}else{
+		} else {
 			return num2;
 		}
 	}
-	
-	//method 5
-	public static double randomNumber(){
+
+	// method 5
+	public static double randomNumber() {
 		return Math.random();
 	}
-	
-	//method 6
-	public static int rollDice(){
+
+	// method 6
+	public static int rollDice() {
 		int diceRoll;
 		double value = Math.random();
-		
-		if (value<0.167){
+
+		if (value < 0.167) {
 			diceRoll = 1;
-		}else if(value<0.33){
+		} else if (value < 0.33) {
 			diceRoll = 2;
-		}else if(value<0.5){
+		} else if (value < 0.5) {
 			diceRoll = 3;
-		}else if(value<0.67){
+		} else if (value < 0.67) {
 			diceRoll = 4;
-		}else if(value<0.83){
+		} else if (value < 0.83) {
 			diceRoll = 5;
-		}else{
+		} else {
 			diceRoll = 6;
 		}
-		
+
 		return diceRoll;
 	}
-	
-	//method 7
-	public static boolean canIBuyLunch(double cash, double lunchCost){
-		if (cash>=lunchCost){
+
+	// method 7
+	public static boolean canIBuyLunch(double cash, double lunchCost) {
+		if (cash >= lunchCost) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
-	
-	//method 8
-	public static String compareFavorites(String userFavColor){
-		String billsFavColor = "BLUE";
-		String userColor = userFavColor.toUpperCase();
-		if (billsFavColor == userFavColor){
+
+	// method 8
+	public static String compareFavorites(String userFavColor) {
+		String billsFavColor = "Blue";
+		if (billsFavColor == userFavColor) {
 			return "You have the same favorite color as Bill!";
-		}else{
+		} else {
 			return "You and Bill have different favorite colors.";
 		}
 	}
-	
-	//method 9
-	public static boolean isDivisible(int num1, int num2){
-		if(num1%num2 == 0){
+
+	// method 9
+	public static boolean isDivisible(int num1, int num2) {
+		if (num1 % num2 == 0) {
 			return true;
-		}else{
+		} else {
 			return false;
-		}	
+		}
 	}
-	
-	//method 10
-	public static void greeting(String name){
+
+	// method 10
+	public static void greeting(String name) {
 		System.out.println("Greetings " + name + "!");
 	}
-	
-}
-	
 
+}
